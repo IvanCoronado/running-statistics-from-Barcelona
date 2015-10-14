@@ -7,8 +7,6 @@
         <div class="title">BARCELONA</div>
         <div class="line short"></div>
     </div>
-
-
     <div class="interface middle left">
         <div class="info"><span class="bold">8</span> sessions</div>
         <div class="line large"></div>
@@ -22,5 +20,13 @@
         <div class="line large"></div>
         <div class="info"><span class="bold">5829</span> calories</div>
     </div>
-    <ui-gmap-google-map center='map.center' zoom='map.zoom' options="options" dragging="false"></ui-gmap-google-map>
+    <ui-gmap-google-map center='map.center' zoom='map.zoom' options="options" >
+        <ui-gmap-markers models="markers" coords="'self'" options="'self'" >
+            <ui-gmap-windows show="'showWindow'" closeClick="'closeClick'" ng-cloak>
+                    <p>Dynamic Marker created via a delay!</p>
+
+                    <p class="muted">My marker will stay open when the window is popped up!</p>
+                </ui-gmap-windows>
+        </ui-gmap-markers>
+    </ui-gmap-google-map>
 </div>
