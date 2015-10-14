@@ -36,6 +36,18 @@
             }]
         }, {
             "featureType": "administrative",
+            "elementType": "all",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "administrative",
+            "elementType": "geometry",
+            "stylers": [{
+                "visibility": "on"
+            }]
+        }, {
+            "featureType": "administrative",
             "elementType": "geometry.fill",
             "stylers": [{
                 "color": "#000000"
@@ -53,6 +65,18 @@
                 "weight": 1.2
             }]
         }, {
+            "featureType": "administrative",
+            "elementType": "labels",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "administrative",
+            "elementType": "labels.text",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
             "featureType": "landscape",
             "elementType": "geometry",
             "stylers": [{
@@ -67,6 +91,18 @@
                 "color": "#000000"
             }, {
                 "lightness": 21
+            }]
+        }, {
+            "featureType": "poi",
+            "elementType": "labels",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
+            "featureType": "road",
+            "elementType": "labels",
+            "stylers": [{
+                "visibility": "off"
             }]
         }, {
             "featureType": "road.highway",
@@ -111,6 +147,12 @@
                 "lightness": 19
             }]
         }, {
+            "featureType": "transit",
+            "elementType": "labels",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        }, {
             "featureType": "water",
             "elementType": "geometry",
             "stylers": [{
@@ -121,10 +163,10 @@
         }];
         $scope.map = {
             center: {
-                latitude: 37.3851350,
-                longitude: -5.9896636
+                latitude: 41.3710614,
+                longitude: 2.1485521
             },
-            zoom: 15,
+            zoom: 14
         };
         $scope.options = {
             /* mapTypeId: google.maps.MapTypeId.ROADMAP,                   
@@ -133,8 +175,8 @@
                  style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
                  position: google.maps.ControlPosition.BOTTOM_CENTER
              },*/
-            minZoom: 15,
-            maxZoom: 15,
+            minZoom: 14,
+            maxZoom: 14,
             draggable: false,
             /* panControlOptions: {
                  position: google.maps.ControlPosition.RIGHT_BOTTOM
