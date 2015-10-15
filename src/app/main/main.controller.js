@@ -6,189 +6,31 @@
         .controller('MainController', MainController);
 
     /** @ngInject */
-    function MainController($scope, uiGmapGoogleMapApi) {
+    function MainController(uiGmapGoogleMapApi, mapStyles) {
         var vm = this;
-        var blackMap = [{
-            "featureType": "all",
-            "elementType": "labels.text.fill",
-            "stylers": [{
-                "saturation": 36
-            }, {
-                "color": "#000000"
-            }, {
-                "lightness": 40
-            }]
-        }, {
-            "featureType": "all",
-            "elementType": "labels.text.stroke",
-            "stylers": [{
-                "visibility": "on"
-            }, {
-                "color": "#000000"
-            }, {
-                "lightness": 16
-            }]
-        }, {
-            "featureType": "all",
-            "elementType": "labels.icon",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "administrative",
-            "elementType": "all",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "administrative",
-            "elementType": "geometry",
-            "stylers": [{
-                "visibility": "on"
-            }]
-        }, {
-            "featureType": "administrative",
-            "elementType": "geometry.fill",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 20
-            }]
-        }, {
-            "featureType": "administrative",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 17
-            }, {
-                "weight": 1.2
-            }]
-        }, {
-            "featureType": "administrative",
-            "elementType": "labels",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "administrative",
-            "elementType": "labels.text",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "landscape",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 20
-            }]
-        }, {
-            "featureType": "poi",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 21
-            }]
-        }, {
-            "featureType": "poi",
-            "elementType": "labels",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "road",
-            "elementType": "labels",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "road.highway",
-            "elementType": "geometry.fill",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 17
-            }]
-        }, {
-            "featureType": "road.highway",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 29
-            }, {
-                "weight": 0.2
-            }]
-        }, {
-            "featureType": "road.arterial",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 18
-            }]
-        }, {
-            "featureType": "road.local",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 16
-            }]
-        }, {
-            "featureType": "transit",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-            }, {
-                "lightness": 19
-            }]
-        }, {
-            "featureType": "transit",
-            "elementType": "labels",
-            "stylers": [{
-                "visibility": "off"
-            }]
-        }, {
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#394951"
-            }, {
-                "lightness": 17
-            }]
-        }];
-        $scope.map = {
+
+        vm.map = {
             center: {
                 latitude: 41.3710614,
                 longitude: 2.1485521
             },
             zoom: 14
         };
-        $scope.options = {
+        vm.options = {
             draggable: false,
             fit:true,
             minZoom: 13,
             maxZoom: 14,
             disableDefaultUI: true,
-            styles: blackMap
+            styles: mapStyles.shades
         };
 
-        $scope.randomMarkers = [{
-            id: 0,
-            latitude: 41.374565,
-            longitude: 2.189239,
-            title: "m0"
-        }];
-
         //http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.9/docs/reference.html
-        $scope.markers = [{
+        vm.markers = [{
             id: 101,
             latitude: 41.374565,
             longitude: 2.185239,
+            labelAnchor: "15 15",
             icon: "false",
             labelContent: "•••",
             /*
@@ -211,6 +53,7 @@
             id: 102,
             latitude: 41.378565,
             longitude: 2.15,
+            labelAnchor: "15 15",
             icon: "false",
             labelContent: "•",
             labelClass: "marker",
@@ -223,6 +66,7 @@
             id: 103,
             latitude: 41.387965,
             longitude: 2.156,
+            labelAnchor: "15 15",
             icon: "false",
             labelContent: "•",
             labelClass: "marker",
@@ -235,6 +79,7 @@
             id: 104,
             latitude: 41.382965,
             longitude: 2.16750,
+            labelAnchor: "15 15",
             icon: "false",
             labelContent: "•",
             labelClass: "marker",
@@ -247,6 +92,7 @@
             id: 105,
             latitude: 41.373,
             longitude: 2.16,
+            labelAnchor: "15 15",
             icon: "false",
             labelContent: "•",
             labelClass: "marker",
@@ -259,6 +105,7 @@
             id: 106,
             latitude: 41.375965,
             longitude: 2.17400,
+            labelAnchor: "15 15",
             icon: "false",
             labelContent: "•",
             labelClass: "marker",
