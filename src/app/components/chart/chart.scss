@@ -1,0 +1,16 @@
+bar-chart {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.x-axis {
+    path {
+        fill: white;
+        opacity: 1;
+    }
+    .tick {
+    	font-size: 12px;
+        fill: white;
+    }
+}

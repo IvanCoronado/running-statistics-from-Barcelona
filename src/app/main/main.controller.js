@@ -18,7 +18,7 @@
         };
         vm.options = {
             draggable: false,
-            fit:true,
+            fit: true,
             minZoom: 13,
             maxZoom: 14,
             disableDefaultUI: true,
@@ -45,9 +45,9 @@
              *  If this property is changed after the label has been created, all previously set styles (except those defined in the style sheet) are removed from the label before the new style values are applied.
              **/
             labelStyle: {
-                width: (30+(3*5))+"px",
-                height: (30+(3*5))+"px",
-                lineHeight: (30+(3*5))+"px"
+                width: (30 + (3 * 5)) + "px",
+                height: (30 + (3 * 5)) + "px",
+                lineHeight: (30 + (3 * 5)) + "px"
             }
         }, {
             id: 102,
@@ -58,9 +58,9 @@
             labelContent: "•",
             labelClass: "marker",
             labelStyle: {
-                width: (30+(1*5))+"px",
-                height: (30+(1*5))+"px",
-                lineHeight: (30+(1*5))+"px"
+                width: (30 + (1 * 5)) + "px",
+                height: (30 + (1 * 5)) + "px",
+                lineHeight: (30 + (1 * 5)) + "px"
             }
         }, {
             id: 103,
@@ -71,9 +71,9 @@
             labelContent: "•",
             labelClass: "marker",
             labelStyle: {
-                width: (30+(1*5))+"px",
-                height: (30+(1*5))+"px",
-                lineHeight: (30+(1*5))+"px"
+                width: (30 + (1 * 5)) + "px",
+                height: (30 + (1 * 5)) + "px",
+                lineHeight: (30 + (1 * 5)) + "px"
             }
         }, {
             id: 104,
@@ -84,9 +84,9 @@
             labelContent: "•",
             labelClass: "marker",
             labelStyle: {
-                width: (30+(1*5))+"px",
-                height: (30+(1*5))+"px",
-                lineHeight: (30+(1*5))+"px"
+                width: (30 + (1 * 5)) + "px",
+                height: (30 + (1 * 5)) + "px",
+                lineHeight: (30 + (1 * 5)) + "px"
             }
         }, {
             id: 105,
@@ -97,9 +97,9 @@
             labelContent: "•",
             labelClass: "marker",
             labelStyle: {
-                width: (30+(1*5))+"px",
-                height: (30+(1*5))+"px",
-                lineHeight: (30+(1*5))+"px"
+                width: (30 + (1 * 5)) + "px",
+                height: (30 + (1 * 5)) + "px",
+                lineHeight: (30 + (1 * 5)) + "px"
             }
         }, {
             id: 106,
@@ -110,10 +110,102 @@
             labelContent: "•",
             labelClass: "marker",
             labelStyle: {
-                width: (30+(1*5))+"px",
-                height: (30+(1*5))+"px",
-                lineHeight: (30+(1*5))+"px"
+                width: (30 + (1 * 5)) + "px",
+                height: (30 + (1 * 5)) + "px",
+                lineHeight: (30 + (1 * 5)) + "px"
             }
+        }];
+
+        vm.data = [{
+            x: 1,
+            y: 0
+        },{
+            x: 2,
+            y: 0
+        },{
+            x: 3,
+            y: 0
+        },{
+            x: 4,
+            y: 0
+        },{
+            x: 5,
+            y: 0
+        },{
+            x: 6,
+            y: 0
+        },{
+            x: 7,
+            y: 15
+        },{
+            x: 8,
+            y: 0
+        },{
+            x: 9,
+            y: 20
+        },{
+            x: 10,
+            y: 8
+        },{
+            x: 11,
+            y: 0
+        },{
+            x: 12,
+            y: 23
+        },{
+            x: 13,
+            y: 0
+        },{
+            x: 14,
+            y: 9
+        },{
+            x: 15,
+            y: 0
+        },{
+            x: 16,
+            y: 21
+        },{
+            x: 17,
+            y: 0
+        },{
+            x: 18,
+            y: 0
+        },{
+            x: 19,
+            y: 30
+        },{
+            x: 20,
+            y: 0
+        },{
+            x: 21,
+            y: 0
+        },{
+            x: 22,
+            y: 25
+        },{
+            x: 23,
+            y: 0
+        },{
+            x: 24,
+            y: 0
+        },{
+            x: 25,
+            y: 0
+        },{
+            x: 26,
+            y: 0
+        },{
+            x: 27,
+            y: 0
+        },{
+            x: 28,
+            y: 0
+        },{
+            x: 29,
+            y: 0
+        },{
+            x: 30,
+            y: 0
         }];
         uiGmapGoogleMapApi.then(function(maps) {
 

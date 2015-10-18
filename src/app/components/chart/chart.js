@@ -3,6 +3,6 @@
 
     angular
         .module('responsiveChart', [
-            
+        	'd3'
         ]);
 })();
