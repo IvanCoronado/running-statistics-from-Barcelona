@@ -21,10 +21,10 @@
         <div class="info"><span class="bold">5829</span> calories</div>
     </div>
     <ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom' options="vm.options">
-        <ui-gmap-markers models="vm.markers" coords="'self'" options="'self'">
-            <!-- <ui-gmap-windows show="'showWindow'" closeClick="'closeClick'" ng-cloak>
-                <p>Dynamic Marker created via a delay!</p>
-                <p class="muted">My marker will stay open when the window is popped up!</p>
+        <ui-gmap-markers models="vm.markers" coords="'self'" options="'self'" events="vm.markersEvents">
+            <!-- <ui-gmap-windows show="'showWindow'" closeClick="'closeClick'" templateParameter="'templateParameter'" ng-cloak>
+
+                <div >{{name}}</div>
             </ui-gmap-windows> -->
         </ui-gmap-markers>
     </ui-gmap-google-map>
