@@ -7,6 +7,9 @@
 // endbower
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:100,400,700,700italic,400italic);
 html {}
+body{
+    margin: 0;
+}
 
 [layout=row] {
     flex-direction: row;

@@ -28,7 +28,7 @@
             // Create a SVG root element
             var svg = d3Service.select(element[0]).append('svg').style('width', '100%');
 
-            
+
 
             // Define the dimensions for the chart
             var height = 200;
@@ -65,7 +65,7 @@
             svg
                 .attr('width', width)
                 .attr('height', height);
-                
+
             svg.append('g').attr('class', 'x-axis axis');
 
             var y = d3.scale.linear().range([height, 0]);
@@ -84,6 +84,17 @@
                 .outerTickSize(1)
                 .tickPadding(17);
 
+            // Draw x-axis transparent background
+            svg.append('rect')
+                .attr('transform', 'translate(0,' + (height - 40) + ')')
+                .attr("width", width)
+                .attr("height", 40)
+                .attr("fill", "rgba(0, 0, 0, 0.5)");
+            //
+            svg.append('text')
+                .classed('month',true)
+                .text('JUNE')
+                .attr('transform', 'translate(10,' + (height - 45) + ')');
             // Draw x-axis
             svg.select('.x-axis')
                 .attr("transform", "translate(0," + (height - 40) + ")")
@@ -115,6 +126,8 @@
                 .attr("height", function(d) {
                     return height - y(d.y);
                 });
+
+
         }
     }
 

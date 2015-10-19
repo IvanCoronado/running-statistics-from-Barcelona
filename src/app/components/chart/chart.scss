@@ -2,15 +2,23 @@ bar-chart {
     position: absolute;
     bottom: 0px;
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .x-axis {
     path {
         fill: white;
-        opacity: 1;
+        opacity: 0.4;
     }
     .tick {
-    	font-size: 12px;
+        font-size: 12px;
         fill: white;
     }
+}
+
+.month {
+   font-family: 'Roboto', sans-serif;
+   font-size: 14px;
+   fill: white;
 }
