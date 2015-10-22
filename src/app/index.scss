@@ -83,7 +83,7 @@ body{
     margin-left: -80px;
 }
 
-div.marker {
+.marker {
     color: white;
     border: 2px white solid;
     border-radius: 50px;
@@ -91,12 +91,40 @@ div.marker {
     font-size: 20px;
     letter-spacing: 0.1em;
     font-weight: bold;
+    animation:turning_cw_out 1s; 
 }
 
-div.marker:hover {
+.marker:hover {
     border: 2px #C1127B solid;
- 
+    border-bottom-color:white;
+
+    animation:turning_cw_in 2s; 
 }
+
+@-webkit-keyframes turning_cw_out {
+    0%{
+        -webkit-transform: rotate(360deg);
+        border-color:  #C1127B;
+    }
+    100%{
+        -webkit-transform: rotate(0deg); 
+        border-color: white;
+    }
+  }
+@-webkit-keyframes turning_cw_in {
+    0%{
+        -webkit-transform: rotate(0deg); }
+    100%{
+        -webkit-transform: rotate(360deg); }
+  }
+.tooltip{
+    position: absolute;
+    top:0;
+    background-color: #C1127B;
+    padding: 10px;
+    color: white;
+}
+
 
 /* ANIMATIONS */
 @keyframes pulse {

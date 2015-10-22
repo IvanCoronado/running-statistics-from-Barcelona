@@ -22,11 +22,8 @@
     </div>
     <ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom' options="vm.options">
         <ui-gmap-markers models="vm.markers" coords="'self'" options="'self'" events="vm.markersEvents">
-            <!-- <ui-gmap-windows show="'showWindow'" closeClick="'closeClick'" templateParameter="'templateParameter'" ng-cloak>
-
-                <div >{{name}}</div>
-            </ui-gmap-windows> -->
         </ui-gmap-markers>
     </ui-gmap-google-map>
     <bar-chart data="vm.data"></bar-chart>
+    <span class="tooltip">Tooltip</span>
 </div>
