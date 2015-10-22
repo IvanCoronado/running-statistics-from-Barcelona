@@ -30,7 +30,6 @@
             id: 101,
             latitude: 41.374565,
             longitude: 2.185239,
-            labelAnchor: "15 15",
             icon: "false",
             labelContent: "•••",
             /*

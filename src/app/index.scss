@@ -83,7 +83,7 @@ body{
     margin-left: -80px;
 }
 
-.marker {
+div.marker {
     color: white;
     border: 2px white solid;
     border-radius: 50px;
@@ -93,9 +93,9 @@ body{
     font-weight: bold;
 }
 
-.marker:hover {
-    background-color: #C52183;
-    animation: pulse 1s;
+div.marker:hover {
+    border: 2px #C1127B solid;
+ 
 }
 
 /* ANIMATIONS */
