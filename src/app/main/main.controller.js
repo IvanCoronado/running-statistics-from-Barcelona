@@ -47,7 +47,8 @@
                 width: (30 + (3 * 5)) + "px",
                 height: (30 + (3 * 5)) + "px",
                 lineHeight: (30 + (3 * 5)) + "px"
-            }
+            },
+            draggable: true
         }, {
             id: 102,
             latitude: 41.378565,
@@ -60,7 +61,8 @@
                 width: (30 + (1 * 5)) + "px",
                 height: (30 + (1 * 5)) + "px",
                 lineHeight: (30 + (1 * 5)) + "px"
-            }
+            },
+            draggable: true
         }, {
             id: 103,
             latitude: 41.387965,
@@ -73,7 +75,8 @@
                 width: (30 + (1 * 5)) + "px",
                 height: (30 + (1 * 5)) + "px",
                 lineHeight: (30 + (1 * 5)) + "px"
-            }
+            },
+            draggable: true
         }, {
             id: 104,
             latitude: 41.382965,
@@ -86,7 +89,8 @@
                 width: (30 + (1 * 5)) + "px",
                 height: (30 + (1 * 5)) + "px",
                 lineHeight: (30 + (1 * 5)) + "px"
-            }
+            },
+            draggable: true
         }, {
             id: 105,
             latitude: 41.373,
@@ -99,7 +103,8 @@
                 width: (30 + (1 * 5)) + "px",
                 height: (30 + (1 * 5)) + "px",
                 lineHeight: (30 + (1 * 5)) + "px"
-            }
+            },
+            draggable: true
         }, {
             id: 106,
             latitude: 41.375965,
@@ -112,7 +117,8 @@
                 width: (30 + (1 * 5)) + "px",
                 height: (30 + (1 * 5)) + "px",
                 lineHeight: (30 + (1 * 5)) + "px"
-            }
+            },
+            draggable: true
         }];
 
         vm.markersEvents = {
@@ -120,6 +126,7 @@
                 console.log(gMarker);
                 console.log(eventName);
                 console.log(model);
+                
             },
             mouseover: function(gMarker, eventName, model) {
 
