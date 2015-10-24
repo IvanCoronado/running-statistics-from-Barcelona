@@ -30,6 +30,7 @@
             id: 101,
             latitude: 41.374565,
             longitude: 2.185239,
+            labelAnchor: "18 15",
             icon: "false",
             labelContent: "•••",
             /*
@@ -48,7 +49,8 @@
                 height: (30 + (3 * 5)) + "px",
                 lineHeight: (30 + (3 * 5)) + "px"
             },
-            draggable: true
+            title: "Barceloneta",
+            caption: "3 RUNS"
         }, {
             id: 102,
             latitude: 41.378565,
@@ -62,7 +64,8 @@
                 height: (30 + (1 * 5)) + "px",
                 lineHeight: (30 + (1 * 5)) + "px"
             },
-            draggable: true
+            title: "Unknown 1",
+            caption: "1 RUNS"
         }, {
             id: 103,
             latitude: 41.387965,
@@ -76,7 +79,8 @@
                 height: (30 + (1 * 5)) + "px",
                 lineHeight: (30 + (1 * 5)) + "px"
             },
-            draggable: true
+            title: "Unknown 2",
+            caption: "1 RUNS"
         }, {
             id: 104,
             latitude: 41.382965,
@@ -90,7 +94,8 @@
                 height: (30 + (1 * 5)) + "px",
                 lineHeight: (30 + (1 * 5)) + "px"
             },
-            draggable: true
+            title: "Unknown 3",
+            caption: "1 RUNS"
         }, {
             id: 105,
             latitude: 41.373,
@@ -104,7 +109,8 @@
                 height: (30 + (1 * 5)) + "px",
                 lineHeight: (30 + (1 * 5)) + "px"
             },
-            draggable: true
+            title: "Unknown 4",
+            caption: "1 RUNS"
         }, {
             id: 106,
             latitude: 41.375965,
@@ -118,7 +124,8 @@
                 height: (30 + (1 * 5)) + "px",
                 lineHeight: (30 + (1 * 5)) + "px"
             },
-            draggable: true
+            title: "Unknown 5",
+            caption: "1 RUNS"
         }];
 
         vm.markersEvents = {
