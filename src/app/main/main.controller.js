@@ -6,7 +6,7 @@
         .controller('MainController', MainController);
 
     /** @ngInject */
-    function MainController(uiGmapGoogleMapApi, mapStyles) {
+    function MainController(uiGmapGoogleMapApi, mapStyles, $window) {
         var vm = this;
 
         vm.map = {
@@ -30,7 +30,7 @@
             id: 101,
             latitude: 41.374565,
             longitude: 2.185239,
-            labelAnchor: "18 15",
+            labelAnchor: "5.2 0",
             icon: "false",
             labelContent: "•••",
             /*
@@ -50,14 +50,35 @@
                 lineHeight: (30 + (3 * 5)) + "px"
             },
             title: "Barceloneta",
-            caption: "3 RUNS"
+            caption: "3 RUNS",
+            windowOptions: {
+                //Adding class to infoWindows so i can style from css
+                boxClass: "tooltip",
+                //Styling the infoWindows 
+                /*boxStyle: {
+                    backgroundColor: "#CCC",
+                    border: "1px solid red",
+                    borderRadius: "5px",
+                    width: "60px",
+                    height: "60px"
+                },*/
+                /*
+                 *  Close button is styled with opacity:0 since i don't need
+                 *  Anyway you can play with him like this
+                 */
+                 closeBoxMargin: "-8px -8px 0px 0px",        
+                 closeBoxURL: "./assets/images/close.gif",  
+                /*
+                 ***/
+                visible: false
+            }
         }, {
             id: 102,
             latitude: 41.378565,
             longitude: 2.15,
-            labelAnchor: "15 15",
+            labelAnchor: "0 0",
             icon: "false",
-            labelContent: "•",
+            labelContent: "• •",
             labelClass: "marker",
             labelStyle: {
                 width: (30 + (1 * 5)) + "px",
@@ -65,12 +86,19 @@
                 lineHeight: (30 + (1 * 5)) + "px"
             },
             title: "Unknown 1",
-            caption: "1 RUNS"
+            caption: "1 RUNS",
+            windowOptions: {
+                boxClass: "tooltip",
+                closeBoxMargin: "-8px -8px 0px 0px",
+                closeBoxURL: "./assets/images/close.gif",
+                visible: false
+            }
         }, {
             id: 103,
             latitude: 41.387965,
             longitude: 2.156,
-            labelAnchor: "15 15",
+            /*
+                        labelAnchor: "15 15",*/
             icon: "false",
             labelContent: "•",
             labelClass: "marker",
@@ -80,12 +108,19 @@
                 lineHeight: (30 + (1 * 5)) + "px"
             },
             title: "Unknown 2",
-            caption: "1 RUNS"
+            caption: "1 RUNS",
+            windowOptions: {
+                boxClass: "tooltip",
+                closeBoxMargin: "-8px -8px 0px 0px",
+                closeBoxURL: "./assets/images/close.gif",
+                visible: false
+            }
         }, {
             id: 104,
             latitude: 41.382965,
             longitude: 2.16750,
-            labelAnchor: "15 15",
+            /*
+                        labelAnchor: "15 15",*/
             icon: "false",
             labelContent: "•",
             labelClass: "marker",
@@ -95,12 +130,19 @@
                 lineHeight: (30 + (1 * 5)) + "px"
             },
             title: "Unknown 3",
-            caption: "1 RUNS"
+            caption: "1 RUNS",
+            windowOptions: {
+                boxClass: "tooltip",
+                closeBoxMargin: "-8px -8px 0px 0px",
+                closeBoxURL: "./assets/images/close.gif",
+                visible: false
+            }
         }, {
             id: 105,
             latitude: 41.373,
             longitude: 2.16,
-            labelAnchor: "15 15",
+            /*
+                        labelAnchor: "15 15",*/
             icon: "false",
             labelContent: "•",
             labelClass: "marker",
@@ -110,12 +152,19 @@
                 lineHeight: (30 + (1 * 5)) + "px"
             },
             title: "Unknown 4",
-            caption: "1 RUNS"
+            caption: "1 RUNS",
+            windowOptions: {
+                boxClass: "tooltip",
+                closeBoxMargin: "-8px -8px 0px 0px",
+                closeBoxURL: "./assets/images/close.gif",
+                visible: false
+            }
         }, {
             id: 106,
             latitude: 41.375965,
             longitude: 2.17400,
-            labelAnchor: "15 15",
+            /*
+                        labelAnchor: "15 15",*/
             icon: "false",
             labelContent: "•",
             labelClass: "marker",
@@ -125,15 +174,28 @@
                 lineHeight: (30 + (1 * 5)) + "px"
             },
             title: "Unknown 5",
-            caption: "1 RUNS"
+            caption: "1 RUNS",
+            windowOptions: {
+                boxClass: "tooltip",
+                closeBoxMargin: "-8px -8px 0px 0px",
+                closeBoxURL: "./assets/images/close.gif",
+                visible: false
+            }
         }];
 
         vm.markersEvents = {
             click: function(gMarker, eventName, model) {
-                console.log(gMarker);
-                console.log(eventName);
-                console.log(model);
-                
+                var classList = gMarker.label.labelDiv_.classList;
+
+                if (classList.contains("active")) {
+                    classList.remove("active");
+                    gMarker.windowOptions.visible = false;
+                } else {
+                    hideAllTooltips();
+                    classList.add("active");
+                    gMarker.windowOptions.visible = true;
+                }
+
             },
             mouseover: function(gMarker, eventName, model) {
 
@@ -232,8 +294,13 @@
             x: 30,
             y: 0
         }];
-        uiGmapGoogleMapApi.then(function(maps) {
 
-        });
+
+        function hideAllTooltips() {
+            var allMarkers = document.getElementsByClassName("marker active");
+            for (var i = 0; i < allMarkers.length; i++) {
+                allMarkers[i].click();
+            }
+        }
     }
 })();

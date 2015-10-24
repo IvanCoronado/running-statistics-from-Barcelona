@@ -22,15 +22,13 @@
     </div>
     <ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom' options="vm.options">
         <ui-gmap-markers models="vm.markers" coords="'self'" options="'self'" events="vm.markersEvents">
-            <ui-gmap-windows show="show" closeClick="'closeClick'" templateParameter="'templateParameter'" ng-cloak>
+            <ui-gmap-windows show="'show'" options="'windowOptions'" ng-cloak>
                 <div ng-non-bindable>
-                    <div>{{title}}</div>
-                    <div>{{caption}}</div>
+                    <div class="title">{{title}}</div>
+                    <div class="caption">{{caption}}</div>
                 </div>
-               
             </ui-gmap-windows>
         </ui-gmap-markers>
     </ui-gmap-google-map>
     <bar-chart data="vm.data"></bar-chart>
-    <span class="tooltip">Tooltip</span>
 </div>
