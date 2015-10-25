@@ -22,7 +22,14 @@
             minZoom: 13,
             maxZoom: 14,
             disableDefaultUI: true,
-            styles: mapStyles.shades
+            styles: mapStyles.shades,
+            /*scrollwheel: false*/
+        };
+        vm.mapEvents = {
+            zoom_changed: function(gMarker, eventName, model) {
+                hideAllTooltips();
+            }
+
         };
 
         //http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerwithlabel/1.1.9/docs/reference.html
@@ -294,6 +301,9 @@
             x: 30,
             y: 0
         }];
+
+
+        vm.hideAllTooltips = hideAllTooltips;
 
 
         function hideAllTooltips() {
