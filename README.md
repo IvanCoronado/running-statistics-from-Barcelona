@@ -3,7 +3,7 @@ This project is based on [this amazing design](https://dribbble.com/shots/221882
 [angular-google-maps directive](https://github.com/angular-ui/angular-google-maps) was used on deep for this project. So if you are interested on cool features like markerLabel or infoBox you can check the code, or open an issue.
 
 # Preview
-(WARNING: Still not responsive)
+(Optimized for Chrome, still not fully responsive)
 [DEMO](http://htmlpreview.github.io/?https://rawgit.com/IvanCoronado/running-statistics-from-Barcelona/master/dist/index.html#/)
 
 # Installation
